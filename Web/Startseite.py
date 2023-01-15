@@ -2,6 +2,8 @@ import streamlit as st
 import yaml
 import streamlit_authenticator as stauth
 
+st.set_page_config("Startseite - Gartensteuerung", "https://static.blumagine.de/blatt.png", menu_items={"About": "(c) Lars Kusch"})
+
 with open('../config.yaml') as file:
     config = yaml.load(file, Loader=yaml.SafeLoader)
 
@@ -18,7 +20,7 @@ name, authentication_status, username = authenticator.login('Anmelden', 'main')
 st.session_state["authenticator"] = authenticator
 if authentication_status:
     authenticator.logout('Abmelden', 'sidebar')
-    st.title('Startseite')
+    st.title('# Startseite')
 elif authentication_status == False:
     st.error('Benutzername oder Passwort falsch')
 elif authentication_status == None:

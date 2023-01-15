@@ -1,4 +1,5 @@
 import streamlit as st
+st.set_page_config("Zonen - Gartensteuerung", "https://static.blumagine.de/blatt.png", menu_items={"About": "(c) Lars Kusch"})
 
 if st.session_state["authentication_status"]:
     st.session_state["authenticator"].logout('Abmelden', 'sidebar')
