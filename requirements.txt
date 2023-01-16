@@ -1,2 +1,7 @@
 streamlit>=1.17.0
+streamlit-authenticator
 PyYAML>=6.0
+pandas~=1.5.2
+tensorflow~=2.11.0
+numpy~=1.24.1
+scikit-learn~=1.2.0
