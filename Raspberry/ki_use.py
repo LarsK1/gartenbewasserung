@@ -9,4 +9,3 @@ loaded_model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['acc
 predictions = loaded_model.predict(numpy.array([numpy.asarray([96, 20, 15.4, 21])]))
 predictions = (predictions > 0.5).astype(bool)
 print(predictions)
-
